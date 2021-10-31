@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  padding: 20px;
+  .main-box {
+    border-radius: 7px;
+    // background-color: green;
+    overflow: hidden;
+
+    .box {
+      height: 270px;
+      padding: 35px;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      flex-direction: column;
+      color: whitesmoke;
+
+      h1 {
+        font-family: "Big Shoulders Display", cursive;
+      }
+      p,
+      .btn {
+        font-family: "Lexend Deca", sans-serif;
+      }
+      p {
+        font-family: "Lexend Deca", sans-serif;
+        line-height: 1.2;
+        font-size: 15px;
+        color: hsla(0, 0%, 100%, 0.75);
+      }
+      .btn {
+        background-color: whitesmoke;
+        padding: 10px 8px;
+        // color: hsl(0, 0%, 95%);
+        border-radius: 25px;
+        border: 2px solid whitesmoke;
+        user-select: none;
+      }
+
+      &.sedans {
+        background-color: hsl(31, 77%, 52%);
+        .btn {
+          color: hsl(31, 77%, 52%);
+          &:hover {
+            background-color: hsl(31, 77%, 52%);
+            color: whitesmoke;
+          }
+        }
+      }
+
+      &.suvs {
+        background-color: hsl(184, 100%, 22%);
+        .btn {
+          color: hsl(184, 100%, 22%);
+          &:hover {
+            background-color: hsl(184, 100%, 22%);
+            color: whitesmoke;
+          }
+        }
+      }
+      &.luxury {
+        background-color: hsl(179, 100%, 13%);
+        .btn {
+          color: hsl(179, 100%, 13%);
+          &:hover {
+            background-color: hsl(179, 100%, 13%);
+            color: whitesmoke;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and(min-width:768px) {
+  html,
+  body {
+    height: calc(100% - 30px);
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .main-box {
+    height: 400px;
+    display: flex;
+    max-width: 760px;
+    .box {
+      box-sizing: border-box;
+      height: 400px !important;
+    }
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
